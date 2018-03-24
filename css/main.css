@@ -1,0 +1,221 @@
+/* 1. Base */
+
+html {
+    background-color: #fff;
+    background-image: none;
+    color: #000000;  
+    font-size: 14px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    min-height: 100vh;
+    min-width: 300px;
+    overflow-x: hidden;
+}
+
+a {
+    color: currentColor;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* 2. Shared */
+
+.picture-shadow,
+.photo-image {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.description,
+.occupation,
+.button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button,
+.social a {
+    transform-origin: center;
+    transition-duration: 50ms;
+}
+
+
+/* 3. Specific */
+
+.content {
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+}
+
+.side {
+    max-height: 30rem;
+    max-width: 30rem;
+}
+
+.about {
+    max-width: 30rem;
+}
+
+.name {
+    font-family: 'Inconsolata', monospace;
+    font-size: 2rem;
+    line-height: 1.125;
+    margin-bottom: 0.5rem;
+
+}
+
+.occupation {
+    font-size: 0.9rem;
+}
+
+.hr {
+    background-color: #000;
+    border: none;
+    content: "";
+    height: 1px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    transform-origin: center left;
+    width: 4rem;
+}
+
+.contact    {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.button {
+    background-color: #fff;
+    border: 1px solid rgb(24, 24, 24);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.0);
+    color: #000;
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1;
+    padding: 1.25em 5em;
+    text-shadow: none;
+    transition-property: box-shadow, transform;
+    user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+}
+
+.button:hover {
+    border-color: aqua;
+    color: aqua;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.03);
+    transform: scale(1.05 ) translate(1px);
+}
+
+button:active {
+    background-color: purple;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+    transform: scale(0.98) translateY(-1px);
+}
+
+.social {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.social li {
+    height: 2rem;
+    text-align: center;
+    width: 2rem;
+}
+
+.social a {
+    align-items: center;
+    display: flex;
+    font-size: 1.7rem;
+    height: 2rem;
+    justify-content: center;
+    opacity: 0.4;
+    transition-property: opacity, transform;
+    width: 2rem;
+    will-change: opacity, transform;
+}
+
+.social a:hover {
+    color: purple;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.social a:active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.github {
+    padding-left: .2rem;
+}
+
+.soundcloud {
+    padding-left: .6rem;
+}
+
+
+
+
+/* 4. Responsiveness */
+
+@media screen and (max-width: 799px) {
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding : 5rem 3rem;
+    }
+
+    .side {
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    .content {
+        align-items: center;
+        justify-content: space-around;
+        justify-content: space-evenly;
+        padding: 8rem;
+    }
+
+    .side {
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 20rem;
+        margin-left: 4rem;
+        order: 2;
+        width: 20rem;
+    }
+
+    .about {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    .photo {
+        padding-top: 100%;
+        position: relative;
+        width: 100%;
+    }
+
+    .photo-shadow {
+        background-image: radial-gradient(#000 0% rgba(0, 0, 0, 0) 90%);
+        position: absolute;
+        top: 10%;
+    }
+
+    .photo-image {
+        position: absolute;
+    }
+
+}
