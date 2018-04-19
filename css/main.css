@@ -19,26 +19,6 @@ a {
     text-decoration: none;
 }
 
-.logo {
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 15.5rem;
-}
-
-main {
-    padding-top: 2rem;
-}
-
-.nav {
-    display: flex;
-    font-size: .9rem;
-}
-
-.who {
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 15rem;
-}
-
-
 /* 2. Shared */
 
 .picture-shadow,
@@ -81,6 +61,13 @@ main {
     max-width: 35rem;
 }
 
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 15.5rem;
+}
+
+
 .name {
     font-family: 'Inconsolata', monospace;
     font-size: 2rem;
@@ -89,8 +76,18 @@ main {
 
 }
 
-.occupation {
-    font-size: 0.9rem;
+.nav {
+    display: flex;
+    font-size: .9rem;
+}
+
+.primaryHeader {
+    padding-top: 2rem;
+}
+
+.who {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 15rem;
 }
 
 .hr {
@@ -101,8 +98,13 @@ main {
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
     transform-origin: center left;
-    width: 5rem;
+    width: 100%;
 }
+
+.occupation {
+    font-size: 0.9rem;
+}
+
 
 .contact    {
     display: inline-block;
@@ -114,10 +116,10 @@ main {
     border: 1px solid rgb(24, 24, 24);
     color: #000;
     display: inline-block;
-    font-size: 0.875rem;
+    font-size: 0.7rem;
     line-height: 1;
     margin-top: 1.5rem;
-    padding: 1em 4em;
+    padding: .8em .8em;
     user-select: none;
     vertical-align: top;
     white-space: nowrap;
@@ -171,6 +173,7 @@ main {
 .soundcloud {
     padding-left: .7rem;
 }
+
 
 
 
