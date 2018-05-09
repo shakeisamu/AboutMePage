@@ -34,31 +34,66 @@ a {
 .occupation,
 .button {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
 }
 
 .button,
 .social a {
     transform-origin: center;
-    transition-duration: 50ms;
+    transition-duration: 150ms;
 }
 
 
 /* 3. Specific */
 
-.content {
+.content1 {
     display: flex;
     position: relative;
-    min-height: 100vh;
+    min-height: 10vh;
+    margin-top: 6rem;
+}
+
+.content2 {
+    display: flex;
+    position: relative;
+    /* min-height: 60vh; */
+    margin-top: 5rem;
+}
+
+.content3 {
+    display: flex;
+    position: relative;
+    /* min-height: 60vh; */
+    margin-top: 5rem;
+}
+
+.face {
+    opacity: 0.5;
+    transform: rotateX(360deg) rotateY(180deg);
+}
+
+.aboutSummary {
+    font-family: 'Inconsolata', monospace;
+    margin-top: 5rem;
+    margin-left: 31rem;
+    max-width: 33rem;
 }
 
 .side {
-    max-height: 30rem;
+    max-height: 10rem;
     max-width: 30rem;
 }
 
 .about {
-    max-width: 30rem;
+    max-width: 35rem;
 }
+
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 15.5rem;
+}
+
 
 .name {
     font-family: 'Inconsolata', monospace;
@@ -68,8 +103,18 @@ a {
 
 }
 
-.occupation {
-    font-size: 0.9rem;
+.nav {
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.primaryHeader {
+    padding-top: 2rem;
+}
+
+.who {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 15rem;
 }
 
 .hr {
@@ -80,8 +125,13 @@ a {
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
     transform-origin: center left;
-    width: 4rem;
+    width: 100%;
 }
+
+.occupation {
+    font-size: 0.9rem;
+}
+
 
 .contact    {
     display: inline-block;
@@ -91,36 +141,28 @@ a {
 .button {
     background-color: #fff;
     border: 1px solid rgb(24, 24, 24);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.0);
     color: #000;
     display: inline-block;
-    font-size: 0.875rem;
+    font-size: 0.7rem;
     line-height: 1;
-    padding: 1.25em 5em;
-    text-shadow: none;
-    transition-property: box-shadow, transform;
+    margin-top: 1.5rem;
+    padding: .8em .8em;
     user-select: none;
     vertical-align: top;
     white-space: nowrap;
-    will-change: box-shadow, transform;
 }
 
 .button:hover {
-    border-color: aqua;
-    color: aqua;
-    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.03);
-    transform: scale(1.05 ) translate(1px);
+    background-color: #000;
+    color: white;
 }
 
-button:active {
-    background-color: purple;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
-    transform: scale(0.98) translateY(-1px);
+.button:active {
 }
 
 .social {
     display: flex;
-    margin-bottom: 2rem;
+    margin-top: 1.5rem;
 }
 
 .social li {
@@ -135,14 +177,13 @@ button:active {
     font-size: 1.7rem;
     height: 2rem;
     justify-content: center;
-    opacity: 0.4;
+    opacity: 0.2;
     transition-property: opacity, transform;
     width: 2rem;
     will-change: opacity, transform;
 }
 
 .social a:hover {
-    color: purple;
     opacity: 1;
     transform: scale(1.2);
 }
@@ -157,16 +198,23 @@ button:active {
 }
 
 .soundcloud {
-    padding-left: .6rem;
+    padding-left: .7rem;
 }
 
+.tocLabel {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8rem;
 
+}
 
 
 /* 4. Responsiveness */
 
 @media screen and (max-width: 799px) {
-    .content {
+    .content1,
+    .content2,
+    .content3 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -181,7 +229,9 @@ button:active {
 }
 
 @media screen and (min-width: 800px) {
-    .content {
+    .content1,
+    .content2,
+    .content3 {
         align-items: center;
         justify-content: space-around;
         justify-content: space-evenly;
@@ -191,10 +241,11 @@ button:active {
     .side {
         flex-grow: 0;
         flex-shrink: 0;
-        height: 20rem;
+        height: 25rem;
         margin-left: 4rem;
+        margin-bottom: 6rem;
         order: 2;
-        width: 20rem;
+        width: 25rem;
     }
 
     .about {
