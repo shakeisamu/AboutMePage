@@ -46,14 +46,41 @@ a {
 
 /* 3. Specific */
 
-.content {
+.content1 {
     display: flex;
     position: relative;
-    min-height: 100vh;
+    min-height: 10vh;
+    margin-top: 6rem;
+}
+
+.content2 {
+    display: flex;
+    position: relative;
+    /* min-height: 60vh; */
+    margin-top: 5rem;
+}
+
+.content3 {
+    display: flex;
+    position: relative;
+    /* min-height: 60vh; */
+    margin-top: 5rem;
+}
+
+.face {
+    opacity: 0.5;
+    transform: rotateX(360deg) rotateY(180deg);
+}
+
+.aboutSummary {
+    font-family: 'Inconsolata', monospace;
+    margin-top: 5rem;
+    margin-left: 31rem;
+    max-width: 33rem;
 }
 
 .side {
-    max-height: 30rem;
+    max-height: 10rem;
     max-width: 30rem;
 }
 
@@ -78,7 +105,7 @@ a {
 
 .nav {
     display: flex;
-    font-size: .9rem;
+    font-size: 1.5rem;
 }
 
 .primaryHeader {
@@ -174,14 +201,20 @@ a {
     padding-left: .7rem;
 }
 
+.tocLabel {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8rem;
 
-
+}
 
 
 /* 4. Responsiveness */
 
 @media screen and (max-width: 799px) {
-    .content {
+    .content1,
+    .content2,
+    .content3 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -196,7 +229,9 @@ a {
 }
 
 @media screen and (min-width: 800px) {
-    .content {
+    .content1,
+    .content2,
+    .content3 {
         align-items: center;
         justify-content: space-around;
         justify-content: space-evenly;
@@ -206,10 +241,11 @@ a {
     .side {
         flex-grow: 0;
         flex-shrink: 0;
-        height: 20rem;
+        height: 25rem;
         margin-left: 4rem;
+        margin-bottom: 6rem;
         order: 2;
-        width: 20rem;
+        width: 25rem;
     }
 
     .about {
